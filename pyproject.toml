@@ -1,0 +1,32 @@
+[project]
+name = "ptms4nwafu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "comarts", email = "comarts@163.com" }
+]
+requires-python = ">=3.13.9"
+dependencies = [
+    "numpy>=2.5.2",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.18.0",
+    "sympy>=1.14.0",
+]
+
+[project.scripts]
+ptms4nwafu = "ptms4nwafu:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+[tool.ruff.lint]
+select = ["A", "B", "C", "D", "E", "F", "I", "N", "Q", "R", "S", "U", "W", "BLE"]
+ignore = ["D203", "D213"]
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = 'single'
+docstring-quotes = "double"
